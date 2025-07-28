@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
 function App() {
   const [input, setInput] = useState("")
   const [result, setResult] = useState("")
 
   // Helper to safely evaluate math expressions
-  const calculate = (expr) => {
+  const calculate = (expr:String) => {
     try {
       // Replace scientific function names with Math equivalents
       let replacedExpr = expr
@@ -27,7 +27,7 @@ function App() {
     }
   }
 
-  const handleClick = (value) => {
+  const handleClick = (value:String) => {
     if (value === "C") {
       // Clear all
       setInput("")
